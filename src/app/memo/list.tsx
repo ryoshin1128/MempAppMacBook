@@ -15,12 +15,11 @@ const Index = (): JSX.Element => {
   const navigation = useNavigation()
   useEffect(() => {
     navigation.setOptions({
-      headerRight: (): JSX.Element => {
+      headerRight: () => {
         return (
           <LogOutButton onPress={() => {
-            // ログアウト
             router.replace('/auth/log_in')
-          }}/>
+          }} />
         )
       }
     })
